@@ -1,0 +1,19 @@
+def encryption(s,x):
+ result = ""
+ 
+ for i in range(len(s)):
+      char = s[i]
+     
+      if (char.isupper()):
+         result += chr((ord(char) + x-65) % 26 + 65)
+
+      else:
+         result += chr((ord(char) + x - 97) % 26 + 97)
+ return result
+
+s = str(input("enter your secret message: "))
+x = int(input("enter your key: "))
+
+print ("your secret message  : " + s)
+print ("your secret key  : " + str(x))
+print ("the encoded mes: " + encryption(s,x))
