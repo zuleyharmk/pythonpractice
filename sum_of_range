@@ -1,0 +1,5 @@
+def sum_of_range(n,m):
+    sum=0
+    for i in range(n,m+1):
+        sum +=i
+    return sum
